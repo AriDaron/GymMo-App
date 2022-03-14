@@ -1,0 +1,18 @@
+.homepageLogo {
+    display: flex;
+    justify-content: center;
+    border-style:groove ;
+}
+
+.homepageOverview {
+    
+    display: flex;
+    justify-content: center;
+    border-style: double;
+    border-width: 5px;
+    height: auto;
+    width: 50%;
+    margin: auto;
+    
+   
+}

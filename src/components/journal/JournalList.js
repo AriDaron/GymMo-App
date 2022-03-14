@@ -30,7 +30,7 @@ const loggedInUser = journalEntries.filter((journalEntry)=> journalEntry.userId 
     return (
         // <> fragment putting all return elements into one JSX element
         <>
-
+<h1 className="homepageLogo">My GymMo Journal</h1>
             <button onClick={() => history.push("/journal/create")}> Add a New Journal Entry  </button>
            
 

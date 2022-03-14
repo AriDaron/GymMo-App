@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { getAllExercises } from "../ApiManager";
 
 
@@ -19,10 +20,16 @@ export const ExerciseList = () => {
     )
     return (
         <>
+            <h1 className="homepageLogo">GYmMo Tutorials</h1>
             {
                 exercises.map(
                     (exerciseObj) => {
-                        return <p key={`exercise--${exerciseObj.id}`}><div className="singleExercise">{exerciseObj.name}{exerciseObj.hyperlink}</div></p>
+                        return <p key={`exercise--${exerciseObj.id}`}>
+                            <div className="singleExercise">{exerciseObj.name}
+                               <a href={exerciseObj.hyperlink}> <p className="exerciseLink">{exerciseObj.hyperlink}
+                                </p></a>
+                            </div>
+                        </p>
                     }
                 )
             }
