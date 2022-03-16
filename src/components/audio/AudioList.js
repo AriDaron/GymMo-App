@@ -23,7 +23,7 @@ export const AudioList = () => {
             {
                 audios.map(
                     (audioObj) => {
-                        return <p key={`audio--${audioObj.id}`}>
+                        return <div key={`audio--${audioObj.id}`}>
                             <div className="singleAudio">{audioObj.title}
                                 
                                     <a href={audioObj.hyperlink}>
@@ -31,7 +31,7 @@ export const AudioList = () => {
                                     </a>
                                 
                             </div>
-                        </p>
+                        </div>
                     }
                 )
             }

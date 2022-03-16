@@ -1,3 +1,15 @@
+.exerciseList {
+   display: flex;
+   flex-direction: column;
+  
+   border: 3px solid blue;
+   width: fit-content;
+
+   
+
+}
+
 .singleExercise {
-    border: 0rem20;
+    display: flex;
+    flex-direction: column;
 }
