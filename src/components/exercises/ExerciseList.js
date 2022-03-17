@@ -8,8 +8,8 @@ export const ExerciseList = () => {
     const [bodyParts, setBodyParts] = useState([]) //track the state of bodyParts
 
     const [selectedBodyPart, setSelectedBodyPart] = useState([]) //track state of selected body part 
-    const [filteredExercises, setFilteredExercises] = useState([]) 
-    const [bodyPartExercises, setBodyPartExercises] = useState([]) 
+    const [filteredExercises, setFilteredExercises] = useState([])
+    const [bodyPartExercises, setBodyPartExercises] = useState([])
     //get all exercises, bodyparts and bodypartmatches from api 
     useEffect(
         () => {
@@ -41,7 +41,7 @@ export const ExerciseList = () => {
             const filteredArray = bodyPartExercises.filter(singleBodyPartExercise => singleBodyPartExercise.bodyPartId === parseInt(selectedBodyPart))
             setFilteredExercises(filteredArray)
 
-            
+
         },
         [selectedBodyPart]
     )
@@ -72,23 +72,25 @@ export const ExerciseList = () => {
             //then filter through the list exercises and if the exercise Id === the bodyPartExercise exerciseId then return html
             // create a clear button to reset setFilteredExercises(exercises) back to all exercises 
             </select>
-            <div className="exerciseList">
-                {
+            <div className="fullList">
+                <div className="exerciseList">
+                    {
 
-                    filteredExercises.map(
+                        filteredExercises.map(
 
 
-                        (exerciseObj) => {
-                            return <div key={`exercise--${exerciseObj.exercise.id}`}>
-                                <p className="singleExercise">{exerciseObj.exercise.name}
-                                    <a href={exerciseObj.exercise.hyperlink}>{exerciseObj.exercise.hyperlink}
-                                    </a>
-                                </p>
-                            </div>
+                            (exerciseObj) => {
+                                return <div key={`exercise--${exerciseObj.exercise.id}`}>
+                                    <p className="singleExercise">{exerciseObj.exercise.name}
+                                        <a href={exerciseObj.exercise.hyperlink}>{exerciseObj.exercise.hyperlink}
+                                        </a>
+                                    </p>
+                                </div>
 
-                        }
-                    )
-                }
+                            }
+                        )
+                    }
+                </div>
             </div>
         </>
     )

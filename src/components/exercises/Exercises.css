@@ -1,10 +1,13 @@
+.fullList {
+    display: flex;
+    justify-content: ;
+}
+
 .exerciseList {
    display: flex;
    flex-direction: column;
-  
    border: 3px solid blue;
    width: fit-content;
-
    
 
 }
