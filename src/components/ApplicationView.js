@@ -7,6 +7,10 @@ import { HomePage } from "./home/HomePage";
 import { Entry } from "./journal/Entry";
 import { JournalEntryForm } from "./journal/JournalEntryForm";
 import { JournalList } from "./journal/JournalList";
+import { MealEntryList } from "./meals/MealList";
+import { NewMealForm } from "./meals/NewMealEntry";
+import { NewWorkoutForm } from "./workouts/NewWorkoutEntry";
+import { WorkoutList } from "./workouts/WorkoutList";
 
 
 
@@ -33,6 +37,18 @@ export const ApplicationViews = () => {
             </Route>
             <Route exact path="/journal/:journalId(\d+)">
                 <Entry/>
+            </Route>
+            <Route exact path="/meals">
+                <MealEntryList />
+            </Route>
+            <Route exact path="/meals/create">
+                <NewMealForm />
+            </Route>
+            <Route exact path="/workouts">
+                <WorkoutList/>
+            </Route>
+            <Route exact path="/workouts/create">
+                <NewWorkoutForm/>
             </Route>
         </>
     )

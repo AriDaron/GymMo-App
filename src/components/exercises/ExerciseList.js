@@ -46,9 +46,17 @@ export const ExerciseList = () => {
         [selectedBodyPart]
     )
 
+    // const showFullListOnRender = ()=>{
+    //     if (!selectedBodyPart){
+    // return exercises
+    //     } else {
+
+    //     }
+    // }    
     return (
         <>
             <h1 className="homepageLogo">GYmMo Tutorials</h1>
+            <div className="dropdownAndList">
             <select id="bodyPartDropdown"
                 //onChange set a copy of the exerciseList  to exercises
                 onChange={
@@ -91,6 +99,7 @@ export const ExerciseList = () => {
                         )
                     }
                 </div>
+            </div>
             </div>
         </>
     )

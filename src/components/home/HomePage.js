@@ -6,7 +6,7 @@ export const HomePage = () => {
     return (
 
         <div>
-            <section>
+            <section className="homepage">
                 <h1 className="homepageLogo">GYmMo</h1>
             </section>
             <section>

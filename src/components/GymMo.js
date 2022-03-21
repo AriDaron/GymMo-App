@@ -4,7 +4,8 @@ import { ApplicationViews } from "./ApplicationView";
 import { Login } from "./auth/Login";
 import { Register } from "./auth/Register";
 import { Navbar } from "./navbar/Navbar";
-
+import { Link } from "react-router-dom";
+import "./GymMo.css"
 
 
 export const GymMo = () => {
@@ -14,8 +15,10 @@ export const GymMo = () => {
                 if (localStorage.getItem("gymMo_user")) {
                     return (
                         <>
+                        
                         <h2>The GymMo App</h2>
                         <Navbar />
+                       
                             <ApplicationViews />
                         </>
                     );
