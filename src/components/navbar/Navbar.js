@@ -17,14 +17,15 @@ export const Navbar = () => {
             </ul>
             
             <ul className="navbar_item">
-                <div class="dropdown">
-                    <button class="dropbtn">Journal</button>
-                    <div class="dropdown-content">
+                <div className="dropdown" >
+                    <button className="dropbtn">Journal</button>
+                    <div className="dropdown-content">
+                        <Link className="Jnavbar_link" to="/journal">Reflection Journal</Link>
                         <Link className="Jnavbar_link" to="/meals">Meal Journal</Link>
                         <Link className="Jnavbar_link" to="/workouts">Workout Journal </Link>
                     </div>
                 </div>            </ul>
-            <ul className="navbar__item ">
+            <ul className="navbar_item ">
                 <Link className="dropbtn" to="#"
                     onClick={
                         () => {

@@ -7,10 +7,10 @@ import { HomePage } from "./home/HomePage";
 import { Entry } from "./journal/Entry";
 import { JournalEntryForm } from "./journal/JournalEntryForm";
 import { JournalList } from "./journal/JournalList";
-import { MealEntryList } from "./meals/MealList";
-import { NewMealForm } from "./meals/NewMealEntry";
-import { NewWorkoutForm } from "./workouts/NewWorkoutEntry";
-import { WorkoutList } from "./workouts/WorkoutList";
+import { MealEntryList } from "./journal/meals/MealList";
+import { NewMealForm } from "./journal/meals/NewMealEntry";
+import { NewWorkoutForm } from "./journal/workouts/NewWorkoutEntry";
+import { WorkoutList } from "./journal/workouts/WorkoutList";
 
 
 

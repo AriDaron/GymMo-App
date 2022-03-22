@@ -2,7 +2,7 @@ import userEvent from "@testing-library/user-event"
 import React, { useEffect, useState } from "react"
 import { useHistory } from "react-router"
 import { Link } from "react-router-dom"
-
+import "./MoodJournal.css"
 
 export const JournalList = () => {
     const [journalEntries, updatedJournal] = useState([])
@@ -38,7 +38,7 @@ const loggedInUser = journalEntries.filter((journalEntry)=> journalEntry.userId 
                 //iterate journals and convert object to JXS 
                 loggedInUser.map(
                     (entry) => {
-                        return <div key={`journal--${entry.id}`}> <br/> <Link to={`/journal/${entry.id}`}> {entry.date} </Link> 
+                        return <div className="journalList" key={`journal--${entry.id}`}> <br/> <Link to={`/journal/${entry.id}`}> {entry.date} </Link> 
                         <div>Mood: {entry.mood}</div>
                         Reflection: {entry.description}. 
                        

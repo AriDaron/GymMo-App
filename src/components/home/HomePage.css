@@ -1,14 +1,20 @@
 .homepageLogo {
+    color: aliceblue;
+    background-color: #2F756F;
     display: flex;
     justify-content: center;
     border-style:groove ;
 }
 
 .homepageOverview {
-    background-color: #A682FF;
+    background-color: white;
+   font-weight: bolder;
+    color: #2F756F;
     display: flex;
     justify-content: center;
     border-style: double;
+    border-radius: 3px;
+    padding: 5px;
     border-width: 5px;
     height: auto;
     width: 50%;
@@ -16,7 +22,65 @@
       
 }
 .homepage{
+    
     display: flex;
     justify-content: center;
     align-items:center;
+}
+
+.bottomOfHomepage{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 250px;
+ 
+}
+
+.tutorialTag {
+    background-color: #b3e9db;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(117, 116, 116);
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);
+    position: relative;
+    border: 3px solid rgb(236, 236, 248);
+    width: 20em
+}
+.audioTag {
+    background-color: #b3e9db;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(117, 116, 116);
+    font-weight: bold;
+    /* margin-top: 300px; */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);
+    position: relative;
+    border: 3px solid rgb(236, 236, 248);
+    width: 20em
+}
+.trackingTag {
+    background-color: #b3e9db;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(117, 116, 116);
+    font-weight: bold;
+    /* margin-top: 300px; */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);
+    position: relative;
+    border: 3px solid rgb(236, 236, 248);
+    width: 20em
+}
+
+.title {
+    color: black;
 }

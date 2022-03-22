@@ -16,7 +16,7 @@ export const GymMo = () => {
                     return (
                         <>
                         
-                        <h2>The GymMo App</h2>
+                        <h2 className="header">The GymMo App</h2>
                         <Navbar />
                        
                             <ApplicationViews />

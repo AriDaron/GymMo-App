@@ -16,15 +16,19 @@ textarea {
 
 body {
   padding: 0 1rem;
+  background-image: url("../img/gymBackground.jpg");
+  background-size: 1700px;
+  
 }
-
 .header {
- 
-text-align: center;
-font-size:6rem ;
+display: flex;
+ background-color: black;
+text-align: left;
+font-size:2rem ;
 }
 
 h2, h3, h4, h5, h6 {
+  color: aliceblue;
   font-family: "Patua One", serif;
   letter-spacing: 2px;
 }

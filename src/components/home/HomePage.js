@@ -23,6 +23,22 @@ export const HomePage = () => {
 
                 </p>
             </section>
+            <section className="bottomOfHomepage">
+                <div className="tutorialTag">
+                    <h2 className="title">Tutorials</h2>
+                    If you don’t know what to do in the gym or you’ve never stepped foot in one before, it can seem like a pretty scary place. What are all the machines for? How do I do use them? Is everyone looking at me?
+                    That’s why we’ve put together the ultimate gym guide for beginners,
+                </div>
+                <div className="audioTag">
+                    <h2 className="title"> Extra Push</h2>
+
+                    We're here to give you the extra push you need, from Quotes, audios to workout playlist. 
+                </div>
+                <div className="trackingTag">
+                   <h2 className="title"> Keep track</h2>
+                   Stay on track by keeping track of your daily moods,meals, adn workouts. 
+                </div>
+            </section>
         </div>
 
 

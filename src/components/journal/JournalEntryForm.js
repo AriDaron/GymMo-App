@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { useHistory } from "react-router";
-
+import "./MoodJournal.css"
 
 export const JournalEntryForm = () => {
 
@@ -55,11 +55,11 @@ export const JournalEntryForm = () => {
     }
 
     return (
-        <form className="ticketForm">
+        <form className="entryForm">
             <h2 className="ticketForm__title">New Journal Entry </h2>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="name">Date:</label>
+                    <label  className="Form" htmlFor="name">Date:</label>
                     <input type="date"
                         onChange={
                             (evt) => {
@@ -69,7 +69,7 @@ export const JournalEntryForm = () => {
                             }
                         } />
                 </div>
-                <label htmlFor="mood">Mood:</label>
+                <label className="Form" htmlFor="mood">Mood:</label>
             <select id="entryMood" onChange={
                 (evt) => {
                     const copy = { ...journalEntry } //creates a copy of state 
@@ -83,7 +83,7 @@ export const JournalEntryForm = () => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="description">Reflection:</label>
+                    <label className="Form" htmlFor="description">Reflection:</label>
                     <textarea
                         required autoFocus
                         type="text"

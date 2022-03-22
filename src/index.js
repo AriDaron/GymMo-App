@@ -12,7 +12,11 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
+    <div style={{ 
+      backgroundImage: `url("https://www.freepik.com/photos/barbell")` 
+    }}>
     <GymMo />
+   </div>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
