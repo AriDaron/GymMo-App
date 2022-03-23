@@ -3,26 +3,26 @@
 import React, { useEffect, useState } from "react"
 import { useParams, useHistory } from "react-router"
 
-export const Entry = () => {
+export const WorkoutEntry = () => {
     const [entry, setEntry] = useState({})  // State variable for current entry object
-    const { journalId } = useParams()  // Variable storing the route parameter
+    const { workoutId } = useParams()  // Variable storing the route parameter
     const history = useHistory()
 
-    //this useEffect runs only when the entryId route param changed 
+    //this useEffect runs only when the workoutId route param changed 
     useEffect(
         () => {
-            fetch(`http://localhost:8088/journalEntries/${parseInt(journalId)}`)
+            fetch(`http://localhost:8088/workoutEntries/${parseInt(workoutId)}`)
                 .then(res => res.json())
                 .then((data) => {
                     setEntry(data) //sets state when data come back fro API
                 })
         },
-        [journalId]  // Above function runs when the value of journalId change 
+        [workoutId]  // Above function runs when the value of workoutId change 
     )
 
 
     const deleteEntry = () => {
-        fetch(`http://localhost:8088/journalEntries/${parseInt(journalId)}`, {
+        fetch(`http://localhost:8088/workoutEntries/${parseInt(workoutId)}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
@@ -30,13 +30,13 @@ export const Entry = () => {
                 setEntry(data)
             })
             .then(() => {
-                history.push("/journal") //push to browser history and take user to tickets
+                history.push("/workouts") //push to browser history and take user to tickets
             })
 
 
     }
 
-    
+
 
     return (
         <>
@@ -44,14 +44,14 @@ export const Entry = () => {
             <section className="entry">
                 <div className="entry__date">Submitted on {entry.date}</div>
                 <h3 className="entry__description">{entry.description}</h3>
-                <button onClick={()=>{
-                    history.push(`/journalEdit/${journalId}`)
+                <button onClick={() => {
+                    history.push(`/workoutEdits/${workoutId}`)
                 }} className="request__edit"
-                    id="request--${journalEntries.id}">
+                    id="request--${workoutEntries.id}">
                     Edit
                 </button>
                 <button onClick={deleteEntry} className="request__delete"
-                    id="request--${journalEntries.id}">
+                    id="request--${workoutEntries.id}">
                     Delete
                 </button>
             </section>

@@ -3,26 +3,26 @@
 import React, { useEffect, useState } from "react"
 import { useParams, useHistory } from "react-router"
 
-export const Entry = () => {
+export const MealEntry = () => {
     const [entry, setEntry] = useState({})  // State variable for current entry object
-    const { journalId } = useParams()  // Variable storing the route parameter
+    const { mealId } = useParams()  // Variable storing the route parameter
     const history = useHistory()
 
     //this useEffect runs only when the entryId route param changed 
     useEffect(
         () => {
-            fetch(`http://localhost:8088/journalEntries/${parseInt(journalId)}`)
+            fetch(`http://localhost:8088/mealEntries/${parseInt(mealId)}`)
                 .then(res => res.json())
                 .then((data) => {
                     setEntry(data) //sets state when data come back fro API
                 })
         },
-        [journalId]  // Above function runs when the value of journalId change 
+        [mealId]  // Above function runs when the value of mealId change 
     )
 
 
     const deleteEntry = () => {
-        fetch(`http://localhost:8088/journalEntries/${parseInt(journalId)}`, {
+        fetch(`http://localhost:8088/mealEntries/${parseInt(mealId)}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
@@ -30,7 +30,7 @@ export const Entry = () => {
                 setEntry(data)
             })
             .then(() => {
-                history.push("/journal") //push to browser history and take user to tickets
+                history.push("/meal") //push to browser history and take user to tickets
             })
 
 
@@ -45,13 +45,13 @@ export const Entry = () => {
                 <div className="entry__date">Submitted on {entry.date}</div>
                 <h3 className="entry__description">{entry.description}</h3>
                 <button onClick={()=>{
-                    history.push(`/journalEdit/${journalId}`)
+                    history.push(`/mealEdit/${mealId}`)
                 }} className="request__edit"
-                    id="request--${journalEntries.id}">
+                    id="request--${mealEntries.id}">
                     Edit
                 </button>
                 <button onClick={deleteEntry} className="request__delete"
-                    id="request--${journalEntries.id}">
+                    id="request--${mealEntries.id}">
                     Delete
                 </button>
             </section>

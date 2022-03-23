@@ -33,10 +33,9 @@ export const MealEntryList = () => {
                 //iterate meals and convert object to JXS 
                 loggedInUser.map(
                     (mealObj) => {
-                        return <div key={`meal--${mealObj.id}`} className="mealList">
+                        return <div key={`meal--${mealObj.id}`} className="mealList"><br/> <Link to={`/meals/${mealObj.id}`}> {mealObj.date} </Link> 
                             <p >
-                                Date: {mealObj.date} For {mealObj.mealTime}
-                                 I had {mealObj.description}. This meals has a total of {mealObj.calories} calories.
+                                For {mealObj.mealTime} I had {mealObj.description}. This meals has a total of {mealObj.calories} calories.
                             </p>
                         </div>
                     }

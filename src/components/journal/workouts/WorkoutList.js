@@ -33,9 +33,9 @@ export const WorkoutList = () => {
                 //iterate workouts and convert object to JXS 
                 loggedInUser.map(
                     (workoutObj) => {
-                        return <p className="workoutList" key= {`workout--${workoutObj.id}`}> <div> Date: {workoutObj.date} </div> Workout: {workoutObj.description}. 
-                        <div>Total time spent working out: {workoutObj.timeSpent} mins.  </div>
-                        </p>
+                        return <div key= {`workout--${workoutObj.id}`} className="workoutList"> <br/> <Link to={`/workouts/${workoutObj.id}`}> {workoutObj.date} </Link>
+                        <div> Total time spent working out: {workoutObj.timeSpent} mins.  </div>
+                        </div>
                     }
                 )
             }

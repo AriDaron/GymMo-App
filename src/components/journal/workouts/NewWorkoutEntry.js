@@ -78,7 +78,7 @@ export const NewWorkoutForm = () => {
                         required autoFocus
                         type="text"
                         className="form"
-                        placeholder="Mins Spent  "
+                        placeholder="Mins Spent working out "
                         onChange={
                             (evt) => {
                                 const copy = { ...workoutEntry } //creates a copy of state 

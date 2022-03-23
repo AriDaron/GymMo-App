@@ -2,42 +2,36 @@ import React, { useEffect, useState } from "react"
 import { useHistory,useParams } from "react-router";
 
 
-export const JournalEdits = ()=>{
+export const WorkoutEdits = ()=>{
     const [entry, setEntry] = useState({})  // State variable for current entry object
-    const { journalId } = useParams()  // Variable storing the route parameter
+    const { workoutId } = useParams()  // Variable storing the route parameter
     const history = useHistory()
 
 
     useEffect(
         () => {
-            fetch(`http://localhost:8088/journalEntries/${parseInt(journalId)}`)
+            fetch(`http://localhost:8088/workoutEntries/${parseInt(workoutId)}`)
                 .then(res => res.json())
                 .then((data) => {
                     setEntry(data) //sets state when data come back fro API
                 })
         },
-        [journalId]  // Above function runs when the value of journalId change 
+        [workoutId]  // Above function runs when the value of workoutId change 
     )
 
-    const EntryMoodChoices = [
-        { label: "Energized" },
-        { label: "Sore" },
-        { label: "Pain" },
-        { label: "Over It" },
-        { label: "Other" }
-    ]
+    
 
-    const saveEditedEntry = (evt) => {
+    const saveEditedWorkout = (evt) => {
          evt.preventDefault()
         // Construct a new object to replace the existing one in the API
         const newEntry = {
             date: entry.date,
-            mood: entry.mood,
             description: entry.description,
+            timeSpent: entry.timeSpent,
             userId:entry.userId,
         }
         // Perform the PUT HTTP request to replace the resource
-        fetch(`http://localhost:8088/journalEntries/${journalId}`, {
+        fetch(`http://localhost:8088/workoutEntries/${workoutId}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
@@ -45,17 +39,17 @@ export const JournalEdits = ()=>{
             body: JSON.stringify(newEntry)
         })
         .then(() => {
-            history.push("/journal")
+            history.push("/workouts")
         })
 
     }
 
     return (
         <form className="entryForm">
-            <h2 className="ticketForm__title">New Journal Entry </h2>
+            <h2 className="workoutForm__title">Edit Workout Entry </h2>
             <fieldset>
                 <div className="form-group">
-                    <label  className="Form" htmlFor="name">Date:</label>
+                    <label htmlFor="name">Date:</label>
                     <input type="date"
                         onChange={
                             (evt) => {
@@ -65,27 +59,16 @@ export const JournalEdits = ()=>{
                             }
                         } />
                 </div>
-                <label className="Form" htmlFor="mood">Mood:</label>
-            <select id="entryMood" onChange={
-                (evt) => {
-                    const copy = { ...entry } //creates a copy of state 
-                    copy.mood = evt.target.value
-                    setEntry(copy)
-                }
-            }>
-                <option value="⬇️ Select a mood ⬇️"> --Select a mood-- </option>
-                {EntryMoodChoices.map((entryMood) => <option value= {entryMood.label}key={entryMood.label}>{entryMood.label} </option>)}
-            </select>
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label className="Form" htmlFor="description">Reflection:</label>
-                    <textarea
+                    <label htmlFor="description">Description:</label>
+                    <input
                     defaultValue={entry.description}
                         required autoFocus
                         type="text"
                         className="form-control"
-                        placeholder="How are you feeling? "
+                        placeholder="Description of Workout "
                         onChange={
                             (evt) => {
                                 const copy = { ...entry } //creates a copy of state 
@@ -95,10 +78,27 @@ export const JournalEdits = ()=>{
                         } />
                 </div>
             </fieldset>
+            <fieldset>
+                <div className="form-group">
+                    <label htmlFor="description">Total time working out:</label>
+                    <input
+                    defaultValue={entry.timeSpent}
+                        required autoFocus
+                        type="text"
+                        className="form"
+                        placeholder="Mins Spent working out "
+                        onChange={
+                            (evt) => {
+                                const copy = { ...entry } //creates a copy of state 
+                                copy.calories = evt.target.value
+                                setEntry(copy) //make the copy the new state 
+                            }
+                        } />
+                </div>
+            </fieldset>
 
-
-            <button onClick={saveEditedEntry} className="btn btn-primary" >
-                Submit Journal
+            <button onClick={saveEditedWorkout} className="btn btn-primary" >
+                Submit Workout
             </button>
         </form>
     )

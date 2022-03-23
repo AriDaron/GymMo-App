@@ -5,11 +5,16 @@ import { Login } from "./auth/Login";
 import { ExerciseList } from "./exercises/ExerciseList";
 import { HomePage } from "./home/HomePage";
 import { Entry } from "./journal/Entry";
+import { JournalEdits } from "./journal/JournalEditForm";
 import { JournalEntryForm } from "./journal/JournalEntryForm";
 import { JournalList } from "./journal/JournalList";
+import { MealEdits } from "./journal/meals/mealEditForm";
+import { MealEntry } from "./journal/meals/MealEntry";
 import { MealEntryList } from "./journal/meals/MealList";
 import { NewMealForm } from "./journal/meals/NewMealEntry";
 import { NewWorkoutForm } from "./journal/workouts/NewWorkoutEntry";
+import { WorkoutEdits } from "./journal/workouts/WorkoutEditForm";
+import { WorkoutEntry } from "./journal/workouts/WorkoutEntry";
 import { WorkoutList } from "./journal/workouts/WorkoutList";
 
 
@@ -36,7 +41,10 @@ export const ApplicationViews = () => {
                 <JournalEntryForm />
             </Route>
             <Route exact path="/journal/:journalId(\d+)">
-                <Entry/>
+                <Entry />
+            </Route>
+            <Route exact path="/journalEdit/:journalId(\d+)">
+                <JournalEdits />
             </Route>
             <Route exact path="/meals">
                 <MealEntryList />
@@ -44,12 +52,25 @@ export const ApplicationViews = () => {
             <Route exact path="/meals/create">
                 <NewMealForm />
             </Route>
+            <Route exact path="/meals/:mealId(\d+)">
+                <MealEntry />
+            </Route>
+            <Route exact path="/mealEdit/:mealId(\d+)">
+                <MealEdits />
+            </Route>
             <Route exact path="/workouts">
-                <WorkoutList/>
+                <WorkoutList />
             </Route>
             <Route exact path="/workouts/create">
-                <NewWorkoutForm/>
-            </Route>
+                <NewWorkoutForm />
+                </Route>
+                <Route exact path="/workouts/:mealId(\d+)">
+                    <WorkoutEntry />
+                </Route>
+                <Route exact path="/workoutEdit/:workoutId(\d+)">
+                    <WorkoutEdits />
+                </Route>
+            
         </>
     )
 
