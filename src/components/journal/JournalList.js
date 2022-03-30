@@ -25,28 +25,29 @@ export const JournalList = () => {
     );
 
 
-    
-const loggedInUser = journalEntries.filter((journalEntry)=> journalEntry.userId === parseInt(localStorage.getItem("gymMo_user")))
+
+    const loggedInUser = journalEntries.filter((journalEntry) => journalEntry.userId === parseInt(localStorage.getItem("gymMo_user")))
     return (
         // <> fragment putting all return elements into one JSX element
         <>
-<h1 className="homepageLogo">My GymMo Journal</h1>
+            <div className="journalList">
+            <h1 className="homepageLogo">My GymMo Journal</h1>
             <button onClick={() => history.push("/journal/create")}> Add a New Journal Entry  </button>
-           
 
-            {
-                //iterate journals and convert object to JXS 
-                loggedInUser.map(
-                    (entry) => {
-                        return <div className="journalList" key={`journal--${entry.id}`}> <br/> <Link to={`/journal/${entry.id}`}> {entry.date} </Link> 
-                        <div>Mood: {entry.mood}</div>
-                        Reflection: {entry.description}. 
-                       
-                        
-                        </div>
-                    }
-                )
-            }
+                {
+                    //iterate journals and convert object to JXS 
+                    loggedInUser.map(
+                        (entry) => {
+                            return <div className="singleJournal" key={`journal--${entry.id}`}> <br /> <Link to={`/journal/${entry.id}`}> {entry.date} </Link>
+                                <div>Mood: {entry.mood}</div>
+                                Reflection: {entry.description}.
+
+
+                            </div>
+                        }
+                    )
+                }
+            </div>
         </>
     )
 }

@@ -40,6 +40,7 @@ export const Entry = () => {
 
     return (
         <>
+        <div className="entry">
             <h2>Entry Details </h2>
             <section className="entry">
                 <div className="entry__date">Submitted on {entry.date}</div>
@@ -55,6 +56,7 @@ export const Entry = () => {
                     Delete
                 </button>
             </section>
+            </div>
         </>
     )
 }

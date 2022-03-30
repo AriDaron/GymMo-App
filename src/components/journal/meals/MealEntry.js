@@ -30,7 +30,7 @@ export const MealEntry = () => {
                 setEntry(data)
             })
             .then(() => {
-                history.push("/meal") //push to browser history and take user to tickets
+                history.push("/meals") //push to browser history and take user to tickets
             })
 
 
@@ -40,6 +40,7 @@ export const MealEntry = () => {
 
     return (
         <>
+        <div className="entry">
             <h2>Entry Details </h2>
             <section className="entry">
                 <div className="entry__date">Submitted on {entry.date}</div>
@@ -55,6 +56,7 @@ export const MealEntry = () => {
                     Delete
                 </button>
             </section>
+            </div>
         </>
     )
 }

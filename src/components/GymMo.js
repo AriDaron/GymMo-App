@@ -6,7 +6,7 @@ import { Register } from "./auth/Register";
 import { Navbar } from "./navbar/Navbar";
 import { Link } from "react-router-dom";
 import "./GymMo.css"
-
+import logo from "../test2.png"
 
 export const GymMo = () => {
     return <>
@@ -16,9 +16,9 @@ export const GymMo = () => {
                     return (
                         <>
                         
-                        <h2 className="header">The GymMo App</h2>
+                        <h2 className="header"><img src={logo} alt=""></img>
                         <Navbar />
-                       
+                        </h2>
                             <ApplicationViews />
                         </>
                     );

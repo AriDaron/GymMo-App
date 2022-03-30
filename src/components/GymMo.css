@@ -18,11 +18,12 @@ body {
   padding: 0 1rem;
   background-image: url("../img/gymBackground.jpg");
   background-size: 1700px;
+  background-attachment: fixed;
   
 }
 .header {
 display: flex;
- background-color: black;
+background-color: white;
 text-align: left;
 font-size:2rem ;
 }

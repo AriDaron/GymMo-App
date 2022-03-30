@@ -1,0 +1,17 @@
+.login {
+    background-color: #b3e9db;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);
+    position: relative;
+    border: 3px solid rgb(236, 236, 248);
+    width: 50em;
+    font-family: "Comfortaa", Arial, sans-serif;
+    font-weight: bold;
+    margin: auto;
+    
+ }

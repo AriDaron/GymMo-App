@@ -19,6 +19,8 @@
     height: auto;
     width: 50%;
     margin: auto;
+    text-align: center;
+    margin-top: 20px;
       
 }
 .homepage{
@@ -48,7 +50,9 @@
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);
     position: relative;
     border: 3px solid rgb(236, 236, 248);
-    width: 20em
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: center;
 }
 .audioTag {
     background-color: #b3e9db;
@@ -63,7 +67,9 @@
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);
     position: relative;
     border: 3px solid rgb(236, 236, 248);
-    width: 20em
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: center;
 }
 .trackingTag {
     background-color: #b3e9db;
@@ -78,7 +84,9 @@
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);
     position: relative;
     border: 3px solid rgb(236, 236, 248);
-    width: 20em
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: center;
 }
 
 .title {

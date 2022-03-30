@@ -35,7 +35,7 @@ export const Login = () => {
             </dialog>
 
             <section>
-                <form className="form--login" onSubmit={handleLogin}>
+                <form className="login" onSubmit={handleLogin}>
                     <h1>Welcome back to GymMo! </h1>
                     <h2>Please sign in</h2>
                     <fieldset>
@@ -53,7 +53,7 @@ export const Login = () => {
                     </fieldset>
                 </form>
             </section>
-            <section className="link--register">
+            <section className="login">
                 <Link to="/register">Not a member yet?</Link>
             </section>
         </main>

@@ -40,12 +40,13 @@ export const WorkoutEntry = () => {
 
     return (
         <>
+        <div className="entry">
             <h2>Entry Details </h2>
             <section className="entry">
                 <div className="entry__date">Submitted on {entry.date}</div>
                 <h3 className="entry__description">{entry.description}</h3>
                 <button onClick={() => {
-                    history.push(`/workoutEdits/${workoutId}`)
+                    history.push(`/workoutEdit/${workoutId}`)
                 }} className="request__edit"
                     id="request--${workoutEntries.id}">
                     Edit
@@ -55,6 +56,7 @@ export const WorkoutEntry = () => {
                     Delete
                 </button>
             </section>
+            </div>
         </>
     )
 }

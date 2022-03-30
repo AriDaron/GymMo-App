@@ -21,26 +21,26 @@ export const MealEntryList = () => {
         // leave DEPENDANCY ARRAY EMPTY , or infinite loop  
         []
     )
-    const loggedInUser = mealEntries.filter((mealEntry)=> mealEntry.userId === parseInt(localStorage.getItem("gymMo_user")))
+    const loggedInUser = mealEntries.filter((mealEntry) => mealEntry.userId === parseInt(localStorage.getItem("gymMo_user")))
     return (
         // <> fragment putting all return elements into one JSX element
         <>
+            <div className="mealList">
+                <button onClick={() => history.push("/meals/create")}> Add a New Meal  </button>
 
-            <button onClick={() => history.push("/meals/create")}> Add a New Meal  </button>
-            {active}
-
-            {
-                //iterate meals and convert object to JXS 
-                loggedInUser.map(
-                    (mealObj) => {
-                        return <div key={`meal--${mealObj.id}`} className="mealList"><br/> <Link to={`/meals/${mealObj.id}`}> {mealObj.date} </Link> 
-                            <p >
-                                For {mealObj.mealTime} I had {mealObj.description}. This meals has a total of {mealObj.calories} calories.
-                            </p>
-                        </div>
-                    }
-                )
-            }
+                {
+                    //iterate meals and convert object to JXS 
+                    loggedInUser.map(
+                        (mealObj) => {
+                            return <div key={`meal--${mealObj.id}`} className="singleJournal"><br /> <Link to={`/meals/${mealObj.id}`}> {mealObj.date} </Link>
+                                <p >
+                                    For {mealObj.mealTime} I had {mealObj.description}. This meals has a total of {mealObj.calories} calories.
+                                </p>
+                            </div>
+                        }
+                    )
+                }
+            </div>
         </>
     )
 }

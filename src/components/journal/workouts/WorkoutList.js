@@ -26,20 +26,20 @@ export const WorkoutList = () => {
         // <> fragment putting all return elements into one JSX elemne t
         <>
        
+       <div className="workoutList">
             <button onClick={()=> history.push("/workouts/create")}> Add a New Workout  </button>
             {active}
-       
             {
                 //iterate workouts and convert object to JXS 
                 loggedInUser.map(
                     (workoutObj) => {
-                        return <div key= {`workout--${workoutObj.id}`} className="workoutList"> <br/> <Link to={`/workouts/${workoutObj.id}`}> {workoutObj.date} </Link>
+                        return <div key= {`workout--${workoutObj.id}`} className="singleJournal"> <br/> <Link to={`/workouts/${workoutObj.id}`}> {workoutObj.date} </Link>
                         <div> Total time spent working out: {workoutObj.timeSpent} mins.  </div>
                         </div>
                     }
                 )
             }
-            
+            </div>
         </>
     )
 }
