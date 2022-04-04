@@ -38,7 +38,7 @@ git clone git@github.com:AriDaron/GymMo-App.git
 cd gym-mo-app
 ```
 2. Access the data.
-api link here
+https://github.com/AriDaron/GymMo-api
 
 3. Launch the client.
 
