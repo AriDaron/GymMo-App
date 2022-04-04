@@ -31,6 +31,11 @@ This app is for anyone that has ever been intimidated or unsure of what to do wh
 
 This application uses mock authentication which is purely for demonstration purposes. Therefore the login and registration code written here is completely insecure and would never be implemented in a professional application.
 
+```bash
+npm install
+```
+
+
 User Login diana@ross.com 
 
 
