@@ -4,10 +4,10 @@ import { AudioList } from "./audio/AudioList";
 import { Login } from "./auth/Login";
 import { ExerciseList } from "./exercises/ExerciseList";
 import { HomePage } from "./home/HomePage";
-import { Entry } from "./journal/Entry";
-import { JournalEdits } from "./journal/JournalEditForm";
-import { JournalEntryForm } from "./journal/JournalEntryForm";
-import { JournalList } from "./journal/JournalList";
+import { Entry } from "./journal/reflection/Entry";
+import { JournalEdits } from "./journal/reflection/JournalEditForm";
+import { JournalEntryForm } from "./journal/reflection/JournalEntryForm";
+import { JournalList } from "./journal/reflection/JournalList";
 import { MealEdits } from "./journal/meals/mealEditForm";
 import { MealEntry } from "./journal/meals/MealEntry";
 import { MealEntryList } from "./journal/meals/MealList";
@@ -16,6 +16,7 @@ import { NewWorkoutForm } from "./journal/workouts/NewWorkoutEntry";
 import { WorkoutEdits } from "./journal/workouts/WorkoutEditForm";
 import { WorkoutEntry } from "./journal/workouts/WorkoutEntry";
 import { WorkoutList } from "./journal/workouts/WorkoutList";
+import { JournalMain } from "./journal/JournalMain";
 
 
 
@@ -35,15 +36,18 @@ export const ApplicationViews = () => {
             </Route>
 
             <Route exact path="/journal">
+                <JournalMain />
+            </Route>
+            <Route exact path="/reflection">
                 <JournalList />
             </Route>
-            <Route exact path="/journal/create">
+            <Route exact path="/reflection/create">
                 <JournalEntryForm />
             </Route>
-            <Route exact path="/journal/:journalId(\d+)">
+            <Route exact path="/reflection/:journalId(\d+)">
                 <Entry />
             </Route>
-            <Route exact path="/journalEdit/:journalId(\d+)">
+            <Route exact path="/reflectionEdit/:journalId(\d+)">
                 <JournalEdits />
             </Route>
             <Route exact path="/meals">

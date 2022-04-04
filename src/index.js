@@ -6,13 +6,12 @@ import './index.css';
 import { BrowserRouter } from 'react-router-dom';
 import $ from 'jquery';
 import Popper from 'popper.js';
-import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-    <div style={{ 
+    <div className='background' style={{ 
       backgroundImage: `url("https://www.freepik.com/photos/barbell")` 
     }}>
     <GymMo />

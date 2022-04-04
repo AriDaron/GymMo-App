@@ -1,0 +1,107 @@
+.journalButtons{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ 
+
+}
+
+.journal_img{
+    max-width: 35em;
+    max-height: 30em;
+  border: 10px solid rgb(236, 236, 248);
+  border-radius: 5px;
+
+  
+  ;
+
+}
+.button {
+   font-size: 30px;
+}
+
+.reflectionButton:hover {background-color: #60b49f;
+}
+.reflectionButton {
+    display: flex;
+    flex-direction: column;
+    background-color: #90e1cb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);
+    position: relative;
+    border: 3px solid rgb(236, 236, 248);
+    width: 55em;
+    font-family: "Comfortaa", Arial, sans-serif;
+    font-weight: bold;
+
+}
+.mealButton:hover {background-color: #60b49f;}
+
+.mealButton {
+    display: flex;
+    flex-direction: column;
+    background-color: #b3e9db;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);
+    position: relative;
+    border: 3px solid rgb(236, 236, 248);
+    width: 45em;
+    font-family: "Comfortaa", Arial, sans-serif;
+    font-weight: bold;
+    
+
+}
+.workoutButton:hover {background-color: #60b49f;}
+.workoutButton {
+    display: flex;
+    flex-direction: column;
+    background-color: #90e1cb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);
+    position: relative;
+    border: 3px solid rgb(236, 236, 248);
+    width: 35em;
+    font-family: "Comfortaa", Arial, sans-serif;
+    font-weight: bold;
+
+}
+
+.journalOverview {
+    background-color: white;
+   font-weight: bolder;
+    color: #2F756F;
+    display: flex;
+    justify-content: center;
+    border-style: double;
+    border-radius: 3px;
+    padding: 5px;
+    border-width: 5px;
+    height: auto;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font-size: medium;
+      
+}
+.description {
+    margin: auto;
+    text-align: center;
+    font-size: medium;
+}

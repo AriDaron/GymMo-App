@@ -25,7 +25,7 @@ export const WorkoutList = () => {
     return (
         // <> fragment putting all return elements into one JSX elemne t
         <>
-       
+        <h1 className="homepageLogo">My Workout Journal</h1>
        <div className="workoutList">
             <button onClick={()=> history.push("/workouts/create")}> Add a New Workout  </button>
             {active}

@@ -15,6 +15,20 @@
     
  }
 
+ .earbud_img{
+    max-width: 35em;
+    max-height: 30em;
+  border: 10px solid rgb(236, 236, 248);
+  border-radius: 5px;
+  
+}
+.picAndList{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    padding:5px;
+    justify-content: space-evenly
+}
  .audioList {
      display: flex;
      flex-direction: column;

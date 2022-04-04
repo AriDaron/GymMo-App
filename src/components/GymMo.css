@@ -24,13 +24,21 @@ body {
 .header {
 display: flex;
 background-color: white;
-text-align: left;
 font-size:2rem ;
+}
+
+.logo {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.nav {
+  display: flex;
+  
 }
 
 h2, h3, h4, h5, h6 {
   color: aliceblue;
-  font-family: "Patua One", serif;
   letter-spacing: 2px;
 }
 

@@ -31,14 +31,14 @@ export const JournalList = () => {
         // <> fragment putting all return elements into one JSX element
         <>
             <div className="journalList">
-            <h1 className="homepageLogo">My GymMo Journal</h1>
-            <button onClick={() => history.push("/journal/create")}> Add a New Journal Entry  </button>
+            <h1 className="homepageLogo">My Reflection Journal</h1>
+            <button onClick={() => history.push("/reflection/create")}> Add a New Journal Entry  </button>
 
                 {
                     //iterate journals and convert object to JXS 
                     loggedInUser.map(
                         (entry) => {
-                            return <div className="singleJournal" key={`journal--${entry.id}`}> <br /> <Link to={`/journal/${entry.id}`}> {entry.date} </Link>
+                            return <div className="singleJournal" key={`journal--${entry.id}`}> <br /> <Link to={`/reflection/${entry.id}`}> {entry.date} </Link>
                                 <div>Mood: {entry.mood}</div>
                                 Reflection: {entry.description}.
 

@@ -45,7 +45,7 @@ export const JournalEdits = ()=>{
             body: JSON.stringify(newEntry)
         })
         .then(() => {
-            history.push("/journal")
+            history.push("/reflection")
         })
 
     }

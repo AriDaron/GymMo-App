@@ -50,7 +50,7 @@ export const JournalEntryForm = () => {
         }
         return fetch("http://localhost:8088/journalEntries", fetchOption)
             .then(() => {
-                history.push("/journal") //push to browser history and take user to journal list 
+                history.push("/reflection") //push to browser history and take user to journal list 
             })
     }
 

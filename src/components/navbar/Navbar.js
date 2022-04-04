@@ -5,17 +5,20 @@ import "./Navbar.css"
 
 export const Navbar = () => {
     return (
-        <ul className="navbar">
+        <div className="navbar">
             <ul className="navbar_item">
-                <Link className="dropbtn" to="/">Home</Link>
+                <Link className="navbtn" to="/">Home</Link>
             </ul>
             <ul className="navbar_item">
-                <Link className="dropbtn" to="/exercises">Tutorials</Link>
+                <Link className="navbtn" to="/exercises">Tutorials</Link>
             </ul>
             <ul className="navbar_item">
-                <Link className="dropbtn" to="/audios">MoAudios</Link>
+                <Link className="navbtn" to="/audios">MoAudios</Link>
             </ul>
-            
+            <ul className="navbar_item">
+                <Link className="navbtn" to="/journal">Journal</Link>
+            </ul>
+{/* 
             <ul className="navbar_item">
                 <div className="dropdown" >
                     <button className="dropbtn">Journal</button>
@@ -24,9 +27,10 @@ export const Navbar = () => {
                         <Link className="Jnavbar_link" to="/meals">Meal Journal</Link>
                         <Link className="Jnavbar_link" to="/workouts">Workout Journal </Link>
                     </div>
-                </div>            </ul>
+                </div>
+            </ul> */}
             <ul className="navbar_item ">
-                <Link className="dropbtn" to="#"
+                <Link className="navbtn" to="#"
                     onClick={
                         () => {
                             localStorage.removeItem("gymMo_user")
@@ -36,7 +40,7 @@ export const Navbar = () => {
                     Logout
                 </Link>
             </ul>
-        </ul>
+        </div>
     )
 
 }

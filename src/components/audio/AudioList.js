@@ -20,7 +20,10 @@ export const AudioList = () => {
     return (
         <>
             <h1 className="homepageLogo">GYmMo Audios</h1>
-            <div className = "audioList">
+            <div className="picAndList">
+                    <img className="earbud_img" src="https://www.stylist.co.uk/images/app/uploads/2020/08/26124506/audio-fitness-trend-crop-1598442988-1281x1281.jpg?w=1200&h=1&fit=max&auto=format%2Ccompress" />
+
+            <aside className = "audioList">
                 {
                     audios.map(
                         (audioObj) => {
@@ -36,6 +39,7 @@ export const AudioList = () => {
                         }
                     )
                 }
+            </aside>
             </div>
         </>
     )

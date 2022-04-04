@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { getAllBodyPartExercises, getAllBodyParts, getAllExercises } from "../ApiManager";
 import "./Exercises.css"
+
 //export a function that will display a list of exercises and links 
 export const ExerciseList = () => {
     const [exercises, setExercises] = useState([]) //track the state of exercises
@@ -42,10 +43,10 @@ export const ExerciseList = () => {
             const filteredArray = bodyPartExercises.filter(singleBodyPartExercise => singleBodyPartExercise.bodyPartId === parseInt(selectedBodyPart))
             setFilteredExercises(filteredArray)
 
-            if (parseInt(selectedBodyPart) === 0) {
+            if (parseInt(selectedBodyPart) === 0){
                 const filteredArray = bodyPartExercises.filter(singleBodyPartExercise => true)
                 setFilteredExercises(filteredArray)
-                }
+            }
         },
         [selectedBodyPart]
     )
@@ -81,13 +82,13 @@ export const ExerciseList = () => {
                                 key={bodyPart.id}>{bodyPart.name}</option>
                         })
                     }
-            //then filter through the list exercises and if the exercise Id === the bodyPartExercise exerciseId then return html
-                // create a clear button to reset setFilteredExercises(exercises) back to all exercises 
                 </select>
-                <div className="fullList">
-                   
+                <div className="picAndList">
+                    <img className="goodForm_img" src="https://www.verywellfit.com/thmb/h2byH6NAVPwVxP2aNFDcj5hwSvM=/614x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-816802320-5b1b95658e1b6e0036da9bdd.jpg" />
+                    <div className="fullList">
 
-                        <div className="exerciseList">
+
+                        <aside className="exerciseList">
                             {
 
                                 filteredExercises.map(
@@ -104,8 +105,9 @@ export const ExerciseList = () => {
                                     }
                                 )
                             }
-                        </div>
-                    
+                        </aside>
+
+                    </div>
                 </div>
             </div>
         </>

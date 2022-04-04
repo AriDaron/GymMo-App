@@ -25,6 +25,7 @@ export const MealEntryList = () => {
     return (
         // <> fragment putting all return elements into one JSX element
         <>
+         <h1 className="homepageLogo">My Meal Journal</h1>
             <div className="mealList">
                 <button onClick={() => history.push("/meals/create")}> Add a New Meal  </button>
 

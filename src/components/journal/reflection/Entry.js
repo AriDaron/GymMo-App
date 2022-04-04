@@ -30,7 +30,7 @@ export const Entry = () => {
                 setEntry(data)
             })
             .then(() => {
-                history.push("/journal") //push to browser history and take user to tickets
+                history.push("/reflection") //push to browser history and take user to tickets
             })
 
 
@@ -46,7 +46,7 @@ export const Entry = () => {
                 <div className="entry__date">Submitted on {entry.date}</div>
                 <h3 className="entry__description">{entry.description}</h3>
                 <button onClick={()=>{
-                    history.push(`/journalEdit/${journalId}`)
+                    history.push(`/reflectionEdit/${journalId}`)
                 }} className="request__edit"
                     id="request--${journalEntries.id}">
                     Edit

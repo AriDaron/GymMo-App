@@ -1,5 +1,5 @@
 import React from "react"
-import { Route,Redirect } from "react-router-dom"
+import { Route, Redirect } from "react-router-dom"
 import { ApplicationViews } from "./ApplicationView";
 import { Login } from "./auth/Login";
 import { Register } from "./auth/Register";
@@ -15,10 +15,15 @@ export const GymMo = () => {
                 if (localStorage.getItem("gymMo_user")) {
                     return (
                         <>
-                        
-                        <h2 className="header"><img src={logo} alt=""></img>
-                        <Navbar />
-                        </h2>
+
+                            <h2 className="header">
+                                <div className="logo">
+                                    <img src={logo} alt=""></img>
+                                </div>
+                                <div className="nav">
+                                    <Navbar />
+                                </div>
+                            </h2>
                             <ApplicationViews />
                         </>
                     );
