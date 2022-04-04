@@ -31,12 +31,24 @@ This app is for anyone that has ever been intimidated or unsure of what to do wh
 
 This application uses mock authentication which is purely for demonstration purposes. Therefore the login and registration code written here is completely insecure and would never be implemented in a professional application.
 
+1. Clone this repository and change to the directory in the terminal.
+
+```bash
+git clone git@github.com:AriDaron/GymMo-App.git
+cd gym-mo-app
+```
+2. Access the data.
+api link here
+
+3. Launch the client.
+
 ```bash
 npm install
+npm start
 ```
 
-
-User Login diana@ross.com 
+### Demo User Login
+Username: diana@ross.com 
 
 
 ## Wireframe 
