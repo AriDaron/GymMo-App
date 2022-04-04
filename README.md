@@ -43,6 +43,8 @@ https://sketchboard.me/XC0ZAAfvCRbF
 
 ![Screen Shot 2022-04-04 at 3 11 00 PM](https://user-images.githubusercontent.com/91293171/161623884-9ce52b50-e153-48a6-9f9a-7e71f32e813b.png)
 
+https://dbdiagram.io/d/6227ad6761d06e6eadc6dce7
+
 
 # Finished 
 
